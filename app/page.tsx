@@ -1,13 +1,14 @@
-import OllamaChat from '../components/OllamaChat'
+import OllamaChat from '../components/OllamaChat';
 
 export default function Home() {
   return (
-    <main className="container mx-auto p-4 min-h-screen bg-gradient-to-b from-gray-100 to-gray-200">
-      <h1 className="text-4xl font-bold mb-8 text-center text-gray-800">Ollama Chat</h1>
-      <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-6">
+    <main className="container mx-auto min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 p-4">
+      <h1 className="mb-8 text-center text-4xl font-bold text-gray-800">
+        Ollama Chat
+      </h1>
+      <div className="mx-auto max-w-2xl rounded-lg bg-white p-6 shadow-lg">
         <OllamaChat />
       </div>
     </main>
-  )
+  );
 }
-

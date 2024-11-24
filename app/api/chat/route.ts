@@ -1,7 +1,7 @@
-import { NextResponse } from 'next/server'
+import { NextResponse } from 'next/server';
 
-const OLLAMA_HOST = process.env.NEXT_PUBLIC_OLLAMA_HOST || 'http://localhost:11434'
-
+const OLLAMA_HOST =
+  process.env.NEXT_PUBLIC_OLLAMA_HOST || 'http://localhost:11434';
 
 export async function POST(req: Request) {
   try {
@@ -12,7 +12,7 @@ export async function POST(req: Request) {
     if (!message || typeof message !== 'string') {
       return NextResponse.json(
         { error: 'Invalid input: "message" is required and must be a string.' },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -43,35 +43,34 @@ export async function POST(req: Request) {
     if (error.name === 'AbortError') {
       return NextResponse.json(
         { error: 'Request to Ollama API timed out.' },
-        { status: 504 }
+        { status: 504 },
       );
     }
 
     return NextResponse.json(
       { error: error.message || 'Failed to get response from Ollama.' },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
 
 export async function GET() {
   try {
-    const response = await fetch(`${OLLAMA_HOST}/api/tags`)
+    const response = await fetch(`${OLLAMA_HOST}/api/tags`);
     if (!response.ok) {
-      throw new Error(`Ollama API error: ${response.statusText}`)
+      throw new Error(`Ollama API error: ${response.statusText}`);
     }
-    const data = await response.json()
-    return NextResponse.json({ 
-      status: 'running', 
+    const data = await response.json();
+    return NextResponse.json({
+      status: 'running',
       models: data.models.map((model: any) => ({
         name: model.name,
         modified_at: model.modified_at,
-        size: model.size
-      }))
-    })
+        size: model.size,
+      })),
+    });
   } catch (error) {
-    console.error('Error checking Ollama status:', error)
-    return NextResponse.json({ status: 'not running' }, { status: 500 })
+    console.error('Error checking Ollama status:', error);
+    return NextResponse.json({ status: 'not running' }, { status: 500 });
   }
 }
-

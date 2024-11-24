@@ -3,6 +3,7 @@
 A modern, user-friendly interface for [Ollama](https://github.com/ollama/ollama) that allows you to interact with various AI models locally. Built with Next.js 13.4.19, this UI provides an efficient way to run and manage different language models on your local machine.
 
 <!-- ![Version](https://img.shields.io/badge/version-0.1.0-blue.svg) -->
+
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 ## 🚀 Features
@@ -24,22 +25,26 @@ A modern, user-friendly interface for [Ollama](https://github.com/ollama/ollama)
 ## 🛠️ Installation
 
 1. First, install Ollama by following the instructions at:
+
    ```bash
    https://github.com/ollama/ollama
    ```
 
 2. Clone this repository:
+
    ```bash
    git clone https://github.com/dpanshug/ollama-chat.git
    cd ollama-chat
    ```
 
 3. Install dependencies:
+
    ```bash
    npm install
    ```
 
 4. Start the development server:
+
    ```bash
    npm run dev
    ```
@@ -66,7 +71,7 @@ NEXT_PUBLIC_OLLAMA_HOST=http://localhost:11434
 
 ## 🌟 Current Model Support
 
-- Llama 3.2 
+- Llama 3.2
 - More models coming soon!
 
 ## 🚧 Project Status

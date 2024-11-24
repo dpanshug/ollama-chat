@@ -1,7 +1,7 @@
-import { Message } from '../hooks/useChat'
+import { Message } from '../hooks/useChat';
 
 interface ChatMessagesProps {
-  messages: Message[]
+  messages: Message[];
 }
 
 export default function ChatMessages({ messages }: ChatMessagesProps) {
@@ -10,7 +10,7 @@ export default function ChatMessages({ messages }: ChatMessagesProps) {
       {messages.map((message, index) => (
         <div
           key={index}
-          className={`p-4 rounded-lg ${
+          className={`rounded-lg p-4 ${
             message.role === 'user' ? 'bg-blue-100 text-right' : 'bg-gray-100'
           }`}
         >
@@ -19,6 +19,5 @@ export default function ChatMessages({ messages }: ChatMessagesProps) {
         </div>
       ))}
     </div>
-  )
+  );
 }
-
