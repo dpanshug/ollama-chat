@@ -54,14 +54,14 @@ A modern, user-friendly interface for [Ollama](https://github.com/ollama/ollama)
    http://localhost:3000
    ```
 
-## 💻 Usage
+## Usage
 
 1. Launch Ollama in the background
 2. Start the UI application
 3. Select your preferred model from the dropdown menu
 4. Begin interacting with the model through the chat interface
 
-## 🔧 Configuration
+## Configuration
 
 The application can be configured through environment variables:
 
@@ -69,16 +69,16 @@ The application can be configured through environment variables:
 NEXT_PUBLIC_OLLAMA_HOST=http://localhost:11434
 ```
 
-## 🌟 Current Model Support
+## Current Model Support
 
 - Llama 3.2
 - More models coming soon!
 
-## 🚧 Project Status
+## Project Status
 
 This project is in its initial phase. Currently, it works correctly with Llama 3.2. I am actively working on adding support for more models and features.
 
-## 🛣️ Roadmap
+## Roadmap
 
 - [ ] Add support for more models
 - [ ] Implement model parameter fine-tuning
@@ -101,14 +101,14 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [Ollama](https://github.com/ollama/ollama) for providing the base model running capabilities
 - [Next.js](https://nextjs.org/) for the amazing framework
 
-## 📞 Support
+## Support
 
-For support, please open an issue in the GitHub repository or contact the maintainers.
+For support, please open an issue in the GitHub repository or contact the maintainer.
 
 ---
 
