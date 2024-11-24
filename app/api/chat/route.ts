@@ -1,34 +1,7 @@
 import { NextResponse } from 'next/server'
 
-const OLLAMA_HOST = process.env.OLLAMA_HOST || 'http://localhost:11434'
+const OLLAMA_HOST = process.env.NEXT_PUBLIC_OLLAMA_HOST || 'http://localhost:11434'
 
-// export async function POST(req: Request) {
-//   const { message, model } = await req.json()
-
-//   try {
-//     const response = await fetch(`${OLLAMA_HOST}/api/generate`, {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//       body: JSON.stringify({
-//         model: model || 'llama2',
-//         prompt: message,
-//         stream: false,
-//       }),
-//     })
-
-//     if (!response.ok) {
-//       throw new Error(`Ollama API error: ${response.statusText}`)
-//     }
-
-//     const data = await response.json()
-//     return NextResponse.json({ response: data.response })
-//   } catch (error) {
-//     console.error('Error calling Ollama API:', error)
-//     return NextResponse.json({ error: 'Failed to get response from Ollama' }, { status: 500 })
-//   }
-// }
 
 export async function POST(req: Request) {
   try {
