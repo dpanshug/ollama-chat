@@ -26,6 +26,7 @@ export default function ChatInput({ onSendMessage, isLoading }: ChatInputProps) 
         onChange={(e) => setMessage(e.target.value)}
         placeholder="Type your message..."
         disabled={isLoading}
+        className="flex-grow"
       />
       <Button type="submit" disabled={isLoading}>
         {isLoading ? 'Sending...' : 'Send'}

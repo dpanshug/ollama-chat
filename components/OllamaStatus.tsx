@@ -24,7 +24,7 @@ export default function OllamaStatus() {
   }, [])
 
   return (
-    <div className={`p-2 rounded-md ${
+    <div className={`p-2 rounded-md text-white font-semibold ${
       status === 'running' ? 'bg-green-500' :
       status === 'not running' ? 'bg-red-500' :
       'bg-yellow-500'

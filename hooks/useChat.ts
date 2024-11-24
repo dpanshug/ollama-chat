@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react'
 
-interface Message {
+export interface Message {
   role: 'user' | 'assistant'
   content: string
 }
