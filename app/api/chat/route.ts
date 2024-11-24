@@ -5,10 +5,8 @@ const OLLAMA_HOST =
 
 export async function POST(req: Request) {
   try {
-    // Parse the request body
     const { message, model = 'llama2', stream = false } = await req.json();
 
-    // Validate input
     if (!message || typeof message !== 'string') {
       return NextResponse.json(
         { error: 'Invalid input: "message" is required and must be a string.' },
@@ -16,24 +14,21 @@ export async function POST(req: Request) {
       );
     }
 
-    // Prepare API call
     const response = await fetch(`${OLLAMA_HOST}/api/generate`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ model, prompt: message, stream }),
-      // Add a timeout to avoid hanging requests
+
       signal: AbortSignal.timeout(10000), // 10 seconds timeout
     });
 
-    // Check API response
     if (!response.ok) {
       const errorText = await response.text();
       throw new Error(`Ollama API error: ${response.status} - ${errorText}`);
     }
 
-    // Parse the API response
     const data = await response.json();
     return NextResponse.json({ response: data.response });
   } catch (error: any) {

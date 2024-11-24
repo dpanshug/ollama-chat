@@ -84,7 +84,7 @@ This project is in its initial phase. Currently, it works correctly with Llama 3
 - [ ] Implement model parameter fine-tuning
 - [ ] Add conversation history
 - [ ] Improve error handling
-- [ ] Add user authentication
+- [ ] Result based on chat history
 - [ ] Docker support
 
 ## 🤝 Contributing
