@@ -14,7 +14,7 @@ export default function ChatMessages({ messages }: ChatMessagesProps) {
             message.role === 'user' ? 'bg-blue-100 text-right' : 'bg-gray-100'
           }`}
         >
-          <p>{message.content}</p>
+          <p className="whitespace-pre-wrap">{message.content}</p>
           <small className="text-gray-500">{message.role}</small>
         </div>
       ))}
